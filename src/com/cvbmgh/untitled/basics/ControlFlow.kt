@@ -1,4 +1,4 @@
-package com.cvbmgh.untitled.basic
+package com.cvbmgh.untitled.basics
 
 /**
  * 控制流：if、when、for、while
