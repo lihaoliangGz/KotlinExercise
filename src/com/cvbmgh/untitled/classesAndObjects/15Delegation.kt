@@ -1,5 +1,3 @@
-import com.cvbmgh.untitled.start.describe
-
 /**
  * 委托
  */
