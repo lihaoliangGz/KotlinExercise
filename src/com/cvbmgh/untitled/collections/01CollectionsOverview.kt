@@ -1,4 +1,4 @@
-package com.cvbmgh.untitled.Collections
+package com.cvbmgh.untitled.collections
 
 /**
  *
