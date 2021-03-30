@@ -5,6 +5,7 @@ package com.cvbmgh.untitled.functionsAndLambdas
  */
 fun main() {
     l()
+    invoke()
 }
 
 fun l() {
@@ -18,3 +19,37 @@ fun l() {
     })
 
 }
+
+//函数类型
+var onClick: (() -> Unit)? = null
+
+val onClick1: () -> Unit = {
+    println("onClick")
+}
+
+val onClick2: (Int) -> Unit = {
+    println("onClick2, it=" + it)
+}
+
+val onClick3: (Int, String) -> Unit = { i, s ->
+    println("onClick3, i=" + i + ", s=" + s)
+}
+
+typealias ClickHandler = (Int, String) -> Unit  //类型别名
+
+//函数类型实例化
+//匿名函数
+val onClick4: (Int) -> Unit = fun(i: Int): Unit {
+    println("函数类型实例化-匿名函数")
+}
+
+
+//函数类型实例调用
+fun invoke() {
+    onClick1.invoke()
+    onClick2(9872)
+}
+
+//lambda表达式
+val sum: (Int, Int) -> Int = { x: Int, y: Int -> x + y }  //完整语法
+val sum2 = { x: Int, y: Int -> x + y }
